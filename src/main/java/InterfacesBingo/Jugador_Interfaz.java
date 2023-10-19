@@ -4,6 +4,11 @@
  */
 package InterfacesBingo;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import juegopackage.Bingo;
+
 /**
  *
  * @author daray
@@ -147,7 +152,14 @@ public class Jugador_Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_correoEntradaActionPerformed
 
     private void guardarJugadorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarJugadorBotonActionPerformed
-         // 
+         String cedula = cedulaEntrada.getText();
+         String correo = correoEntrada.getText();
+         String nombre = nombreEntrada.getText();
+        try {
+            Bingo.registrarJugador(nombre, correo, cedula);
+        } catch (IOException ex) {
+            Logger.getLogger(Jugador_Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_guardarJugadorBotonActionPerformed
 
     /**

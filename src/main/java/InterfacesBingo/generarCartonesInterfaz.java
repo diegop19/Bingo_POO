@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package InterfacesBingo;
-
+import javax.swing.JOptionPane;
+import juegopackage.Bingo;
 /**
  *
  * @author daray
@@ -91,7 +92,13 @@ public class generarCartonesInterfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_cantidadCartonesEntradaActionPerformed
 
     private void generarCartonesBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarCartonesBotonActionPerformed
-        // TODO add your handling code here:
+      String cantidadTexto = cantidadCartonesEntrada.getText();
+      try{
+        int cantidadCartones = Integer.parseInt(cantidadTexto);
+        Bingo.generarCartones(cantidadCartones);
+      }catch(NumberFormatException e){
+        JOptionPane.showMessageDialog(this, "Ingrese un número válido para la cantidad de cartones.", "Error", JOptionPane.ERROR_MESSAGE);
+      }
     }//GEN-LAST:event_generarCartonesBotonActionPerformed
 
     /**

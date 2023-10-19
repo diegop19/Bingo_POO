@@ -9,6 +9,7 @@ public class Jugador {
   private String nombre;
   private String correoElectronico;
   private String cedula;
+  private Carton carton;
   private static int numJugadores;
   
   public Jugador(String pNombre,String pCorreoElectronico, String pCedula){
@@ -18,6 +19,9 @@ public class Jugador {
     numJugadores++;
   }
   
+  public void asignarCarton(Carton pCarton){
+    this.carton = pCarton;
+  }
   public String getNombre() {
     return nombre;
   }

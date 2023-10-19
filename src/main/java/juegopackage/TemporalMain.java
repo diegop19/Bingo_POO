@@ -10,6 +10,7 @@ import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 import java.util.ArrayList;
 import java.util.List;
+import InterfacesBingo.*;
 /**
  *
  * @author daray
@@ -19,9 +20,10 @@ public class TemporalMain {
   public static void main(String[] args) throws FileNotFoundException, IOException, CsvValidationException, CsvException{
       
       Bingo.cargarJugadores();
-      Bingo.registrarJugador("Diego Araya", "die@gmail.com","703210814");
-    
+      Jugador jugador = new Jugador("Ramon", "ra@gmail.com","321456844");
+      RegistroDeJugadores.registrarJugador(jugador);
      
+      //Jugador_Interfaz.main(args);
      
   }
    

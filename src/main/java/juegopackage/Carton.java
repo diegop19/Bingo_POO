@@ -31,6 +31,7 @@ public class Carton {
   private int[][] carton;
   private boolean[][] cartonMarcado;
   private ArrayList<Integer> numerosGenerados;
+  private Jugador jugadorAsignado;
   
   private static int contador = 0;
   
@@ -65,7 +66,7 @@ public class Carton {
     String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String numeros = "0123456789";
     
-    String identi= " ";
+    String identi= "";
     Random random = new Random();
     
     for (int i = 0; i < 3; i++) {
@@ -183,7 +184,7 @@ public class Carton {
   /**
    * Genera la imagen del carton y la guarda en una carpeta
    */
-  private void generarImagen() {
+  private String generarImagen() {
     int anchoCarton = 300; // Ancho de la imagen y de la celda del Identificador
     int altoCarton = 406; // Alto de la imagen
 
@@ -295,7 +296,7 @@ public class Carton {
     } catch (IOException e) {
         e.printStackTrace();
     }
-    
+    return nombreImagen;
   }
   
   // Métodos getter
@@ -341,6 +342,10 @@ public class Carton {
   
   public boolean[][] getcartonMarcado() {
     return cartonMarcado;
+  }
+  
+  public void asignarJugador(Jugador pJugador){
+   this.jugadorAsignado = pJugador;
   }
   
 }

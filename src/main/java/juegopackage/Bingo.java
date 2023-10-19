@@ -13,6 +13,7 @@ import java.util.*;
  */
 public class Bingo {
   private static ArrayList<Jugador> jugadoresRegistrados = new ArrayList<>();
+  private static ArrayList<Carton> cartonesGenerados = new ArrayList<>();
   
   public Bingo() throws IOException, IOException, FileNotFoundException, CsvException{
     cargarJugadores();
@@ -23,7 +24,6 @@ public class Bingo {
     for(String[] jugador: jugadores){
        Jugador guardarJugador = new Jugador(jugador[0],jugador[1],jugador[2]);
        jugadoresRegistrados.add(guardarJugador);
-       System.out.println("registrao");
      }
     
   }
@@ -39,12 +39,20 @@ public class Bingo {
       }
   }  
   
-  public static void generarCartones(){
-   
+  public static void generarCartones(int pCantidadCartones){
+      if (pCantidadCartones > 500 || pCantidadCartones < 0){
+        System.out.print("Cantidad invalida");
+      }
+      while(pCantidadCartones != 0){
+        Carton nuevoCarton = new Carton();
+        cartonesGenerados.add(nuevoCarton);
+      }   
       
   }
   
-  
+  public void consultarCarton(String pIdentificador){
+    
+  }
   
   
 }

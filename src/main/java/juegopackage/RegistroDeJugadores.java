@@ -27,7 +27,7 @@ public class RegistroDeJugadores {
      
     try (CSVWriter writer = new CSVWriter(new FileWriter(JUGADORESCSV,true))) {
       writer.writeNext(nuevoJugador);
-      writer.close();
+      //writer.close();
       }
      }
   
@@ -40,5 +40,4 @@ public class RegistroDeJugadores {
     
  }
   
- public void prueba(){}
 }
