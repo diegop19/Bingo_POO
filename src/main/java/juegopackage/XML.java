@@ -9,5 +9,6 @@ package juegopackage;
  * @author Mary Paz
  */
 public class XML {
+    System.out.println("Hola");
     
 }
