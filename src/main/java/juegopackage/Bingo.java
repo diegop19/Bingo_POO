@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package juegopackage;
+import InterfacesBingo.*;
 import com.opencsv.exceptions.CsvException;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
@@ -42,16 +44,30 @@ public class Bingo {
   public static void generarCartones(int pCantidadCartones){
       if (pCantidadCartones > 500 || pCantidadCartones < 0){
         System.out.print("Cantidad invalida");
-      }
+      }else{
       while(pCantidadCartones != 0){
         Carton nuevoCarton = new Carton();
         cartonesGenerados.add(nuevoCarton);
+        pCantidadCartones-=1;
+      }
       }   
       
   }
   
-  public void consultarCarton(String pIdentificador){
+  public static void consultarCarton(String pIdentificador){
+    Carton cartonEncontrado = null;
+    Jugador jugadorAsociado = null;
+    for(Carton carton : cartonesGenerados){
+      if (carton.getIdentificador().equals(pIdentificador)){
+        cartonEncontrado = carton;
+        jugadorAsociado = carton.getJugadorAsignado();
+      }
+    }
     
+    }
+    
+
+      
   }
   
   

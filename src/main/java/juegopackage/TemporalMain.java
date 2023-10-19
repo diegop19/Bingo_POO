@@ -20,10 +20,9 @@ public class TemporalMain {
   public static void main(String[] args) throws FileNotFoundException, IOException, CsvValidationException, CsvException{
       
       Bingo.cargarJugadores();
-      Jugador jugador = new Jugador("Ramon", "ra@gmail.com","321456844");
-      RegistroDeJugadores.registrarJugador(jugador);
-     
+      
       //Jugador_Interfaz.main(args);
+     generarCartonesInterfaz.main(args);
      
   }
    

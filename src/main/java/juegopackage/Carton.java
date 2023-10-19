@@ -31,7 +31,7 @@ public class Carton {
   private int[][] carton;
   private boolean[][] cartonMarcado;
   private ArrayList<Integer> numerosGenerados;
-  private Jugador jugadorAsignado;
+  private Jugador jugadorAsignado = null;
   
   private static int contador = 0;
   
@@ -348,5 +348,9 @@ public class Carton {
    this.jugadorAsignado = pJugador;
   }
   
+  public Jugador getJugadorAsignado(){
+    return jugadorAsignado;
+
+  }
 }
 
