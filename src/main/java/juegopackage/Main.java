@@ -15,7 +15,7 @@ import InterfacesBingo.*;
  *
  * @author daray
  */
-public class TemporalMain {
+public class Main {
     protected static List<String[]> jugadores= null;
   public static void main(String[] args) throws FileNotFoundException, IOException, CsvValidationException, CsvException{
       

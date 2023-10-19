@@ -350,7 +350,10 @@ public class Carton {
   
   public Jugador getJugadorAsignado(){
     return jugadorAsignado;
-
+  }
+  
+  public static int getContador(){
+    return contador;
   }
 }
 

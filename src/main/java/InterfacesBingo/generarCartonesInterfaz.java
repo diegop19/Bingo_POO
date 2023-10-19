@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package InterfacesBingo;
 import javax.swing.JOptionPane;
 import juegopackage.Bingo;
@@ -17,7 +14,11 @@ public class generarCartonesInterfaz extends javax.swing.JFrame {
     public generarCartonesInterfaz() {
         initComponents();
     }
-
+    
+    public void mostrarVentana(){
+      this.setVisible(true);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

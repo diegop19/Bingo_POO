@@ -16,9 +16,13 @@ import java.util.*;
 public class Bingo {
   private static ArrayList<Jugador> jugadoresRegistrados = new ArrayList<>();
   private static ArrayList<Carton> cartonesGenerados = new ArrayList<>();
+  private static String modoDeJuego;
+  private static String premio;
+  private static Tombola tombola;
   
   public Bingo() throws IOException, IOException, FileNotFoundException, CsvException{
     cargarJugadores();
+    tombola = Tombola.getInstance();
   }
  
   public static void cargarJugadores() throws IOException, FileNotFoundException, CsvException{
@@ -63,12 +67,53 @@ public class Bingo {
         jugadorAsociado = carton.getJugadorAsignado();
       }
     }
-    
-    }
-    
-
-      
   }
+  
+  public static void iniciarJuego(String pModoDeJuego, String pPremio){
+    setModoDeJuego(pModoDeJuego);
+    setPremio(pPremio);
+    juegoEnCursoInterfaz juego = new juegoEnCursoInterfaz();
+    juego.mostrarVentana();
+  }
+  
+  public static int cantarNumero(){
+    int numero = tombola.sacarNumero();
+    return numero;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  public static void setModoDeJuego(String pModoDeJuego){
+    modoDeJuego = pModoDeJuego;
+  }
+  
+  public static void setPremio(String pPremio){
+    premio = pPremio;
+  }
+  
+  public static String getModoDeJuego(){
+    return modoDeJuego;
+  }
+  
+  public static String getPremio(){
+    return premio;
+  }
+  
   
   
 }
